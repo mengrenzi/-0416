@@ -1,6 +1,17 @@
 # Restaurant Simulation
 
+## Project schedule
 
+- [x] Build up the Project
+- [x] Push the project to Remote Repository
+- [ ] complish the Run.py
+- [ ] complish the MenuItem.py
+- [ ] complish the Menu.py
+- [ ] complish the Diner.py
+- [ ] complish the Waiter.py
+- [ ] Refactoring
+
+## Files Provided
 
 ### RestaurantHelper.py
 -	Goal: This class includes helper methods to allow diners to randomly show up to the restaurant.
