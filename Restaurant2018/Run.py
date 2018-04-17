@@ -5,14 +5,13 @@ Run this file in order to start the restaurant simulation program
 import datetime
 import time
 
-# TODO 0: uncomment the following 3 import statements when you create these files
-# from Menu import Menu
-# from Waiter import Waiter
-# from RestaurantHelper import RestaurantHelper
+from Menu import Menu
+from Waiter import Waiter
+from RestaurantHelper import RestaurantHelper
 
 
 def main():
-    RESTAURANT_NAME = ""  # TODO 1: add your own restaurant name in the quotes
+    RESTAURANT_NAME = "My_Restaurant"  # TODO 1: add your own restaurant name in the quotes
     restaurantTime = datetime.datetime(2017, 5, 1, 5, 0)
 
     # Create the menu object
