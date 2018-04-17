@@ -29,7 +29,7 @@ class Menu(object):
     def printMenuItemsByType(self, type):
         print(type, ':')
         for i, v in enumerate(self.__menuItemDictionary[type]):
-          print(i + 1, v)
+            print(i + 1, v)
 
     def getNumMenuItemsByType(self, type):
         return len(self.__menuItemDictionary[type])
