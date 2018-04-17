@@ -1,10 +1,7 @@
 # MenuItem.py
 # Goal: This class will represent a single item that a diner can order from the restaurant’s menu
 
-from Menu import Menu
-
-
-class MenuItem(Menu):
+class MenuItem(object):
     def __init__(self, name, type, price, description):
         self.__name = name
         self.__type = type
