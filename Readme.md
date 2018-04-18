@@ -1,12 +1,12 @@
 # Restaurant Simulation
-
+ 
 ### RestaurantHelper.py
 -	Goal: This class includes helper methods to allow diners to randomly show up to the restaurant.
 
 ### Run.py
 -	Goal: This class starts the simulation.
 
-## Part 1 – Creating the Restaurant’s Menu
+## [Complish]Part 1 – Creating the Restaurant’s Menu 
 
 ### MenuItem.py
 -	Goal: This class will represent a single item that a diner can order from the restaurant’s menu

@@ -15,7 +15,7 @@ def main():
     restaurantTime = datetime.datetime(2017, 5, 1, 5, 0)
 
     # Create the menu object
-    # menu = Menu("menu.csv")  # TODO 2: uncomment this once the Menu class is implemented
+    menu = Menu("menu.csv")
     # create the waiter object using the created Menu we just created
     # waiter = Waiter(menu)  # TODO 4: uncomment this one the Waiter class is implemented
     print("Welcome to " + RESTAURANT_NAME + "!")

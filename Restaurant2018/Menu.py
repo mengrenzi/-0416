@@ -8,7 +8,6 @@ from MenuItem import MenuItem
 class Menu(object):
     MENU_ITEM_TYPES = ["Drink", "Appetizer", "Entree", "Dessert"]
 
-
     def __init__(self, filename):
         self.__menuItemDictionary = {}
         for t in self.MENU_ITEM_TYPES:
@@ -19,17 +18,19 @@ class Menu(object):
                 menuItem = MenuItem(row[0], row[1], row[2], row[3])
                 self.__menuItemDictionary[menuItem.type].append(menuItem)
 
-    def get_keys(d, value):
-        return [k for k,v in d.items() if v == value]
+#    def get_keys(d, value):
+#        return [k for k,v in d.items() if v == value]
 
     def getMenuItem(self, type, index):
-        myMenuItem = Menu.get_keys(self.__menuItemDictionary,index)
+        for key in self.__menuItemDictionary:
+            if key == type:
+                myMenuItem = self.__menuItemDictionary[key][index]
         return myMenuItem
 
     def printMenuItemsByType(self, type):
         print(type, ':')
         for i, v in enumerate(self.__menuItemDictionary[type]):
-            print(i + 1, v)
+            print("#",i + 1, v)
 
     def getNumMenuItemsByType(self, type):
         return len(self.__menuItemDictionary[type])
