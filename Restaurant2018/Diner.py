@@ -25,10 +25,7 @@ class Diner(object):
         print(self.__order)
 
     def calculateMealCost(self):
-        totalcost = 0
-        for item in self.__order:
-            totalcost += item[1]
-        return totalcost
+        return sum([item[1] for item in self.__order])
 
     @property
     def name(self):

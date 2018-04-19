@@ -16,14 +16,16 @@ class Waiter(object):
         return len(self.__diner)
 
     def printDinerStatuses(self):
-
+        pass
 
     def takeOrders(self):
+        pass
 
     def ringUpDiners(self):
+        pass
 
     def removeDoneDiners(self):
+        pass
 
     def advanceDiners(self):
-
-
+        pass
