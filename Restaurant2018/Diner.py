@@ -15,14 +15,16 @@ class Diner(object):
     __repr__ = __str__
 
     def updateStatus(self):
-        count = 0
-        for x in self.STATUS:
-            if x == self.__status:
-                print(self.STATUS[count + 1])
-            count += 1
+        for value, key in enumerate(self.STATUS):
+            if self.STATUS[4] == self.__status:
+                print("Update failed, the Diner is leaving")
+                break
+            elif self.STATUS[value] == self.__status:
+                self.__status = self.STATUS[value + 1]
+                break
 
     def printOrder(self):
-        print(self.__order)
+        print("Above all, You order the ", self.__order)
 
     def calculateMealCost(self):
         return sum([item[1] for item in self.__order])

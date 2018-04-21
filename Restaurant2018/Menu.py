@@ -18,9 +18,6 @@ class Menu(object):
                 menuItem = MenuItem(row[0], row[1], row[2], row[3])
                 self.__menuItemDictionary[menuItem.type].append(menuItem)
 
-#    def get_keys(d, value):
-#        return [k for k,v in d.items() if v == value]
-
     def getMenuItem(self, type, index):
         for key in self.__menuItemDictionary:
             if key == type:

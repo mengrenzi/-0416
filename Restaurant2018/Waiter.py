@@ -13,19 +13,37 @@ class Waiter(object):
         self.__diners.append(Diner)
 
     def getNumDiners(self):
-        return len(self.__diner)
+        return len(self.__diners)
 
     def printDinerStatuses(self):
-        pass
+        for value, key in enumerate(self.__diners):
+            print("Diner", self.__diners[value].name, " is", self.__diners[value].status)
 
     def takeOrders(self):
-        pass
+        for value, key in enumerate(self.__diners):
+            if key.status == "ordering":
+                for valueMenu, keyMenu in enumerate(self.__menu.MENU_ITEM_TYPES):
+                    self.__menu.printMenuItemsByType(keyMenu)
+                    myOrder = int(input("Please choose your order(use num):"))
+                    self.__diners[value].order.append(self.__menu.getMenuItem(keyMenu, myOrder - 1).name)
+                self.__diners[value].printOrder()
 
     def ringUpDiners(self):
-        pass
+        for value, key in enumerate(self.__diners):
+            if key.status == "paying":
+                totalcost = self.__diners[value].calculateMealCost()
+                print("Diner", key.name, "customer's total cost is:", totalcost)
 
     def removeDoneDiners(self):
-        pass
+        for value, key in enumerate(self.__diners):
+            if key.status == "leaving":
+                print("thanks for Diner", self.__diners[value].name, "who is leaving")
+                self.__diners.pop(value)
 
     def advanceDiners(self):
-        pass
+        self.printDinerStatuses()
+        self.takeOrders()
+        self.ringUpDiners()
+        self.removeDoneDiners()
+        for value, key in enumerate(self.__diners):
+            self.__diners[value].updateStatus()
